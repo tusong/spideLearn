@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 def test_eight_components():
     #使用驱动实例开启会话
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(r"D:\devTools\chromedriver_win32\chromedriver.exe")
 
 #在浏览器上执行操作，这里是导航到一个网页
     driver.get("https://www.selenium.dev/selenium/web/web-form.html")
