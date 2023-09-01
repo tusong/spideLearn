@@ -36,4 +36,16 @@ time.sleep(2)
 driver.find_element_by_id('sole-input').click()
 driver.find_element_by_xpath("//div[@data-key='美食']").click()
 print("点击美食")
+time.sleep(2)
 
+titles = driver.find_elements_by_xpath("//a[@class='n-blue']")
+scores = driver.find_elements_by_xpath("//span[@class='score']")
+prices = driver.find_elements_by_xpath("//span[@class='d-red']")
+addrs = driver.find_elements_by_xpath("//span[@class='n-grey']")
+
+# print([ x.text for x in titles])
+
+data = {'店名':[ x.text for x in titles],'评分':[ x.text for x in scores],'价格':[ x.text for x in titles]
+        ,'地址':[ x.text for x in addrs]}
+
+pd.DataFrame(data).to_excel("百度地图美食.xls")
