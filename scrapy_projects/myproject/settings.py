@@ -65,9 +65,9 @@ DEFAULT_REQUEST_HEADERS = {
 #}
 
 DOWNLOADER_MIDDLEWARES = {
-    #'weibo.middlewares.CookiesMiddleware': 554,
+    # 'weibo.middlewares.CookiesMiddleware': 554,
     #'weibo.middlewares.ProxyMiddleware': 555,
-    'myproject.middlewares.CookiesHardCodeMiddleware': 555,
+    #'myproject.middlewares.CookiesHardCodeMiddleware': 555,
 }
 
 # Enable or disable extensions
@@ -83,9 +83,9 @@ DOWNLOADER_MIDDLEWARES = {
 #}
 
 ITEM_PIPELINES = {
-    'myproject.pipelines.TimePipeline': 300,
-    'myproject.pipelines.WeiboPipeline': 301,
-    'myproject.pipelines.MongoPipeline': 302,
+    'myproject.toutiaoPiplines.TimePipeline': 300,
+    'myproject.toutiaoPiplines.WeiboPipeline': 301,
+    'myproject.toutiaoPiplines.MongoPipeline': 302,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -117,3 +117,7 @@ FEED_EXPORT_ENCODING = "utf-8"
 LOG_LEVEL = "WARNING"
 MONGO_URI='192.168.161.148:27017'
 MONGO_DATABASE='weibo'
+
+MYSQL_URI='192.168.161.139:3306'
+MYSQL_USERNAME='vk_sz1'
+MYSQL_PASSWORD='vk_sz1'
